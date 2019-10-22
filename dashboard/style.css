@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main-header {
+    background-color: #565656;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .row {
+        width: 120%;
+    }
+  
+
+    
+  }
