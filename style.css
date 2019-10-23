@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+box-sizing: border-box;
+background-image:linear-gradient(200deg,#fff 50%, #344A84 120%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(109, 111, 212);
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  /* overflow: hidden; */
+}
+.loginBtn {
+   position: relative;
+  /* width: 13em;  - apply for fixed size */
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+ font-size: 16px;
+  }
+.loginBtn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgb(12, 13, 65);
+}
+
+.wrap {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.wrap h1,
+.wrap > h3 {
+  margin: 10px auto;
+}
+
+h1 {
+  margin: 2em auto 0 auto;
+  padding-top: 2em;
+  color: #344a84;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+section.form-container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 500px;
+  margin: 15px auto 100px auto;
+  
+}
+
+.form-container h3 {
+  text-align: center;
+  font-size: 1.2em;
+  color: #252525;
+}
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  background: rgba(246, 246, 246, 0.767);
+  outline: none;
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+::placeholder {
+  position: relative;
+  left: 0.1em;
+  color: #474747;
+}
+
+.input-email,
+.input-password,
+.input-text {
+  position: relative;
+}
+
+.input-email:before {
+  /* content: "\f0e0"; */
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  padding-left: 0.5em;
+  position: absolute;
+  top: 0.8em;
+  left: -0.2em;
+  z-index: 2;
+}
+
+.input-password:before {
+  /* content: "\f023"; */
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  padding-left: 0.5em;
+  position: absolute;
+  top: 0.8em;
+  left: -0.2em;
+  z-index: 1;
+}
+
+.input-text:before {
+  /* content: "\f007"; */
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  padding-left: 0.5em;
+  position: absolute;
+  top: 0.8em;
+  left: -0.1em;
+  z-index: 1;
+}
+
+button.btn-sign-in {
+  margin-bottom: 1em;
+  padding: 0.4em;
+  line-height: 1em;
+  background: #fff;
+  border: none;
+  border-radius: 0.1em;
+  font-size: 1.1em;
+
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button.btn-sign-in:hover {
+  
+}
+
+p {
+  font-size: 0.7em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* Tablet Responsiveness view*/
+
+@media (min-width: 767px) and (max-width: 1000px) {
+  .wrap {
+    padding: 0 8em;
+  }
+  h1 {
+    margin: 0.8em auto 1.5em auto;
+    font-size: 1.5em;
+  }
+  section.form-container {
+    padding: 1em;
+  }
+  .form-container .form-wrap {
+    padding: 0 3em;
+  }
+  input[type="text"],
+  input[type="password"] {
+
+    width: 100%;
+    padding: 0.9em;
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
+  button.btn-sign-in {
+    margin-bottom: 1.5em;
+    padding: 0.7em;
+    line-height: 1em;
+  }
+  p {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+  .wrap {
+    /* padding: 0 10em; */
+  }
+  h1 {
+    margin: 1.5em auto 1.5em auto;
+    font-size: 1.5em;
+  }
+}
+/* Desktop Responsiveness view*/
+
+@media (min-width: 1301px) {
+  .wrap {
+    /* padding: 0 30em; */
+  }
+  h1 {
+    margin: 1em auto 1em auto;
+    font-size: 1.3em;
+  }
+  .form-container .form-wrap {
+    padding: 0 1em;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1.2em;
+    font-size: 1em;
+  }
+  button.btn-sign-in {
+    margin-bottom: 1.5em;
+    padding: 0.7em;
+    line-height: 1em;
+  }
+  p {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1500px) {
+  .wrap {
+    /* padding: 0 33em; */
+  }
+  h1 {
+    margin: 2em auto 1em auto;
+    font-size: 1.8em;
+  }
+}
+
+/* Logout */
+.logout {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.logout button {
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* Modal */
+.display-result {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.display-result-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.show-result {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.close-btn {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-btn:hover {
+  background-color: darkgray;
+}
