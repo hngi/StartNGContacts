@@ -48,10 +48,10 @@ li{
   <div class="container-fluid">
     
     <ul class="nav nav-pills">
-      <li style="list-style-type: none; margin: 0;padding: 0; display:inline; class="active"><a href="#">AddContact</a></li>
+      <li style="list-style-type: none; margin: 0;padding: 0; display:inline; class="active"><a href="/addcontacts">AddContact</a></li>
      
     
-      <li><a href="dashboard.php">Contact Lists</a></li>
+      <li><a href="/dashboard">Contact Actions</a></li>
     </ul>
   </div>
 </nav>

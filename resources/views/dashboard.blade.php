@@ -48,10 +48,10 @@ li{
   <div class="container-fluid">
     
     <ul class="nav nav-pills">
-      <li style="list-style-type: none; margin: 0;padding: 0; display:inline; class="active"><a href="index.html">AddContact</a></li>
+      <li style="list-style-type: none; margin: 0;padding: 0; display:inline; class="active"><a href="/addcontacts">AddContact</a></li>
      
     
-      <li><a href="dashboard.php">Contact Actions</a></li>
+      <li><a href="/dashboard">Contact Actions</a></li>
     </ul>
   </div>
 </nav>
@@ -61,8 +61,8 @@ li{
                         <div class="panel-body">
                             <form style="display: inline" id="reused_form">
                                  <div class="form-group">
-                                     <label>Add contacts Category</label>
-                                     <input type="text" name="name" class="form-control" placeholder="category name">
+                                     <label>Add contacts group</label>
+                                     <input type="text" name="name" class="form-control" placeholder="group name">
                                  </div>
                                  
                                  <div class="form-group">
@@ -79,8 +79,8 @@ li{
                         <div class="panel-body">
                             <form style="display: inline" id="reused_form">
                                  <div class="form-group">
-                                     <label>Select contacts Category</label>
-                                     <input type="text" name="name" class="form-control" placeholder="select category">
+                                     <label>Fetch contacts group</label>
+                                     <input type="text" name="name" class="form-control" placeholder="select group">
                                  </div>
                                  
                                  <div class="form-group">

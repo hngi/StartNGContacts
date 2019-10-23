@@ -78,7 +78,7 @@
     
                     <button type="submit" name="log" class="btn btn-primary w-100">Sign in</button>
                     <div class="text-center pt-3">
-                        <small>Don't have an account? <a href="signup.html">Sign up here</a></small>
+                        <small>Don't have an account? <a href="#">Sign up here</a></small>
                     </div>
                 </form>
             </section>
