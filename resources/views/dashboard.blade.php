@@ -59,7 +59,8 @@ li{
     <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
                     <div class="panel panel-danger">
                         <div class="panel-body">
-                            <form style="display: inline" id="reused_form">
+                            <form action="/storecategory" method="POST" style="display: inline" id="reused_form">
+                                 {{ csrf_field() }}
                                  <div class="form-group">
                                      <label>Add contacts group</label>
                                      <input type="text" name="name" class="form-control" placeholder="group name">
