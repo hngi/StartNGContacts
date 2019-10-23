@@ -24,37 +24,28 @@
                  min-height: 555px !important;
                 background-color: #f1f1f1;
               }
-            
-              .convo-section{
-                  padding: 20px;
-                  margin: 30px auto;
-                  background: white;
-                  border-radius: 10px;
-              }
-              .convo-section .icon-pack i.yellow{
-                  color: #ffe921;
-              }
-            .convo-section .icon-pack i{
-                  font-size: 16px;
-              }
-            
               .sidebar a {
                 display: block;
                 color: black;
                 padding: 16px;
                 text-decoration: none;
+                font-size: 18px;
               }
                
               .sidebar a.active {
-                background-color: rgb(109, 111, 212);
+                background-color: #76323f;
                 color: white;
+                font-size: 20px;
               }
               
               .sidebar a:hover:not(.active) {
                 background-color: #555;
                 color: white;
               }
-              
+              .page-content a{
+                  text-decoration:none;
+                  color: #76323f;
+              }
               div.content {
                 margin-left: 200px;
                 padding: 1px 16px;
@@ -63,21 +54,40 @@
               .page-content {
                 margin: 0;
                 background-color: #e5e3e3;
-                  min-height: 555px !important;
-              
-            
+                min-height: 555px !important;
+            }
+            .top-header{
+                background-color: #565656;
+                padding: 8px 0px;
+                color: white;
             }
             .navbar-brand{
-                padding: 0 ;
+              
                 float: none ;
+                
             }
             .input-group{
                 width: 500px !important;
                 display: inline-block;
             }
+            .btn{
+                background: #76323f;
+                color: #f1f1f1;
+                padding: 10px;
+            }
+            .page-content hr{
+                width:200%;
+            }
+            .modal-header {
+           background-color: #76323f;
+           padding:9px 15px;
+           color:#FFF;
+           font-family:Verdana, sans-serif;
+           border-bottom:1px solid #eee;
+
+            }
             
-              
-              @media screen and (max-width: 700px) {
+              @media screen and (max-width: 768px) {
                 .sidebar {
                   width: 100%;
                   height: auto;
@@ -87,21 +97,23 @@
                 div.content {margin-left: 0;}
               }
               
-              @media screen and (max-width: 400px) {
+              @media screen and (max-width: 375px) {
                 .sidebar a {
                   text-align: center;
                   float: none;
                 }
               }
               
+
 </style>
 
 </head>
+              
 <body>
     <header class="top-header" role="banner">
         <div class="navbar navbar-expand-lg">
             <div class="navbar-brand">
-                <h2>StartNg-Contacts</h2>
+                <h3>StartNg-Contacts</h3>
             </div>
 
     </header>
@@ -111,7 +123,7 @@
                 <a class="active" href="#home">Dashboard</a>
                 <a href="Profile.html">Profile Settings</a>
                 <a href="contact.html">Contact Settings</a>
-                <a href="logout.html">Log Out</a>
+                <a href="signin.html">Log Out</a>
             </div>
 
             <div class="page-content col-lg-10  d-flex justify-content-center">
@@ -138,17 +150,23 @@
                                               <div class="panel panel-danger">
                                                   <div class="panel-body">
                                                       <form id="reused_form">
-                                                           <div class="form-group">
-                                                                <label></i> Group</label>
-                                                                <input type="text" name="name" class="form-control" placeholder="HNG Interns">
-                                                            </div>
+                                                            <div class="form-group">
+                                                                    <label for="select group">Select Group</label>
+                                                                    <select class="form-control" id="select group">
+                                                                      <option>HNG Interns</option>
+                                                                      <option>Mentors</option>
+                                                                      <option>Ex Interns</option>
+                                                                      <option>HNG Staffs</option>
+                                                                      <option>Partners</option>
+                                                                    </select>
+                                                                  </div>
                                                             <div class="form-group">
                                                                <label></i>Upload Your File</label>
                                                                <input type="file" name="file" class="form-control">
                                                            </div>
                               
                                                            <div class="form-group">
-                                                               <button class="btn btn-raised btn-block btn-danger">Add Contact</button>
+                                                               <button class="btn btn-raised btn-block btn-warning">Add Contact</button>
                                                            </div>
                                                       </form>
                                                   </div>
