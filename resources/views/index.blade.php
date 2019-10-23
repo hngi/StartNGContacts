@@ -66,7 +66,8 @@
         <div class="row justify-content-md-center"></div>
             <section class="form-container col-md-3">
                 <h5 class="pb-3 text-center font-weight-bold">WELCOME</h3>
-                <form action="index.php" method="post">
+                <form action="/login" method="POST">
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label for=""><small>Email Address</small></label>
                         <input type="text" name="email" placeholder="Email Address" class="form-control">

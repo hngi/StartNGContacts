@@ -91,7 +91,16 @@ li{
                                     </div>
                                     <div class="form-group">
                                             <label></i> Group</label>
-                                            <input type="group" name="email" class="form-control" placeholder="HNG Intern">
+
+                                           
+                                            <select type="group" name="group" class="form-control" >
+                                              <option value="none">None</option>
+                                              @foreach ($category as $categories)
+                                                <option value="{{ $categories->title}}"> {{ $categories->title}}  </option>
+                                              
+                                              @endforeach
+                                            
+                                            </select>
                                         </div>
                                  <div class="form-group">
                                      <button class="btn btn-raised btn-block btn-danger">Add Contact</button>
