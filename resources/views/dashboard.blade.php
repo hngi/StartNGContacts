@@ -29,26 +29,15 @@
             Start-Ng-Contacts
         </a>
     </nav>
-
     </header>
-  <style>
-  th,td {
-    
-    word-wrap: break-word;
-}
-li{
-
-  style="list-style-type: none; margin: 0;padding: 0; display:inline;
-}
-
-</style>
+  
 
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     
     <ul class="nav nav-pills">
-      <li style="list-style-type: none; margin: 0;padding: 0; display:inline; class="active"><a href="/addcontacts">AddContact</a></li>
+      <li style="list-style-type: none; margin: 0;padding: 0; display:inline;" class="active"><a href="/addcontacts">Add Contact</a></li>
      
     
       <li><a href="/dashboard">Contact Actions</a></li>
@@ -59,7 +48,7 @@ li{
     <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
                     <div class="panel panel-danger">
                         <div class="panel-body">
-                            <form style="display: inline" id="reused_form">
+                            <form style="display: inline;" id="reused_form">
                                  <div class="form-group">
                                      <label>Add contacts group</label>
                                      <input type="text" name="name" class="form-control" placeholder="group name">
@@ -77,7 +66,7 @@ li{
   
                     <div class="panel panel-danger">
                         <div class="panel-body">
-                            <form style="display: inline" id="reused_form">
+                            <form style="display: inline;">
                                  <div class="form-group">
                                      <label>Fetch contacts group</label>
                                      <input type="text" name="name" class="form-control" placeholder="select group">
@@ -99,27 +88,27 @@ li{
     <div class="container">
 
      
-
-
-
       <div class="row">
         <div class="col-md-3">
           <div class="card text-center text-white mb-3" style="background-color: #76323f;">
             <div class="card-body">
               <h3>All Contacts</h3>
               <h4 class="dispaly-4">
-                <i class="far fa-address-card"></i></i> 20
+                <i class="far fa-address-card">20</i>
               </h4>
               <a href="all.html" class="btn btn-outline-light btn-sm">View</a>
                       <a href="#" class="btn btn-block text-white" data-toggle="modal" data-target="#addMentorModal" style="background-color: #D7CEc7;">
-              <i class="fas fa-mail"></i>Send Mail
+              <i class="fas fa-mail">Send Mail</i>
             </a>
             </div>
           </div>
 
-      </div></div></section>
+      </div>
+    </div>
+    </div>
+    </section>
   <!--Post-->
-  <section id="posts">
+  <section id="">
     <div class="container">
       <div class="row">
 
@@ -150,7 +139,7 @@ li{
                   <td>FE</td>
                 </tr>
                 <tr>
-                    <td>2</i></td>
+                    <td>2</td>
                     <td>Adeyinka Koiki Shakirat</td>
                     <td>+234 - 8082652626</td>
                     <td>May 30 2019</td>
@@ -158,7 +147,7 @@ li{
                   </tr>
 
                   <tr>
-                    <td>3</i></td>
+                    <td><i>3</i></td>
                     <td>Adeyinka Koiki Shakirat</td>
                     <td>+234 - 8082652626</td>
                     <td>May 30 2019</td>
@@ -193,9 +182,9 @@ li{
             
 
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+     
+
 
 
   <!--Modals for the add section-->
@@ -213,7 +202,7 @@ li{
             <form>
                 <div class="form-group">
                     <label for="title">Add a form for Contacts here</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="title">
                 </div>
             </form>
         </div>
@@ -237,7 +226,7 @@ li{
               <form>
                 <div class="form-group">
                   <label for="title">Add a form for prospects here ( in this modal )</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" id="title">
                 </div>
               </form>
             </div>
