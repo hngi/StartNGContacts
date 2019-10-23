@@ -15,10 +15,21 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/addcontacts', function () {
-    return view('addcontacts');
-});
+
+
+// route to process the form
+Route::post('/login', 'AdminController@Login');
+
+Route::get('/addcontacts', 'ContactController@FetchCategories');
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+Route::get('/admin', 'AdminController@index');
+
+Route::get('/admin/createadmin', 'AdminController@create');
+Route::post('/storeadmin', 'AdminController@storeadmin');
+
+Route::post('/storecategory', 'CategoryController@storecategory');
+
+
 
