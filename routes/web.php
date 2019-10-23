@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/addcontacts', function () {
+    return view('addcontacts');
+});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
