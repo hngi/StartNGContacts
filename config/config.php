@@ -14,7 +14,7 @@
 // what is your Mysql database server hostname
 $database_host = 'localhost';
 // what is the name of the database we are using
-$database_name = 'startNgcontacts';
+$database_name = 'startngcontacts';
 // what user has access to this database
 $database_user = 'root';
 // and what is the password to login to control the database
