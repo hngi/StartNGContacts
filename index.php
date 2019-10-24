@@ -142,7 +142,7 @@
                    
                     
                     <li class="nav-item mr-5">
-                        <a class="btn btn-success nav-link px-5" href="/admin" style="color: #fff;">Admin
+                        <a class="btn btn-success nav-link px-5" href="admin" style="color: #fff;">Admin
                             Login</a>
                     </li>
                 </ul>
@@ -155,7 +155,7 @@
             <h4 class="pt-5 mt-5 pb-4" style="color: #fff; font-style: normal; font-weight: 600; font-size: 35px; line-height: 27px;">Welcome to StartNG Contacts</h4>
             <p class="pb-3" style="color: #fff; font-style: normal; font-weight: 400; font-size: 16px; line-height: 27px;">
             </p>
-            <a href="/admin" class="btn btn-success pl-5 pr-5 mb-4">Admin Login</a>
+            <a href="admin" class="btn btn-success pl-5 pr-5 mb-4">Admin Login</a>
         </div>
     </div>
 
