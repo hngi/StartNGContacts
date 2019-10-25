@@ -179,7 +179,7 @@
                     <a class="btn btn-success ml-5 pl-5 pr-5" href="/admin">Admin Login</a>
                 </div>
                 <div class="col-md-6">
-                    <img src="https://res.cloudinary.com/itunuo/image/upload/v1571982788/startng/startngcontact_htgxzs.jpg" class=".img-fluid.height:1000px;">
+                    <img src="https://res.cloudinary.com/itunuo/image/upload/v1571982788/startng/startngcontact_htgxzs.jpg" class="img-fluid">
                 </div>
             </div>
         </div>
