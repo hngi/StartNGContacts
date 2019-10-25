@@ -164,9 +164,8 @@
             <div class="col-md-6">
                 <h4 class="mb-4 mt-3">Add and Manage contacts and subscribers</h4>
                 <p>Have control over all your subscribers. <br>
-                 Disseminate information via mails and import more contacts with ease.</p>
+                 Send mails and import more contacts with ease.</p>
             </div>
-         
             <div class="col-md-6 mb-3">
                 <!-- <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png" class="img-fluid"> -->
                 <img src="https://res.cloudinary.com/salasi/image/upload/v1571951003/digi_jiyee2.png" class="img-fluid">
@@ -178,16 +177,13 @@
         <div class="container pt-5 pb-5">
             <div class="row align-items-center">
                 <div class="col-md-8 pb-5">
-                    <h4 style="font-weight: bold; font-size: 40px;">Try out our New Import email function</h4>
-                    <p style="font-size: 20px;">Fetches emails from json file format
+                    <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
+                    <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
                     </p>
-                    <p style="font-size: 20px;">Note: Import Contact Function in dashboard, Only works with VCF and text file formats.
-                    </p>
-                    
-                       <form action="importcontacts.php">
-                        <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Proceed</button>
+                    <form class="form-inline">
+                        <input type="text" class="form-control col-md-8" id="email">
+                        <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
                     </form>
-                    
                 </div>
                 <div class="col-md-4">
                     <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
@@ -196,7 +192,13 @@
         </div>
     </div>
         
+    <div class="container">
+        <div class="mb-4 mt-3">
+            Try out our Import emails functions that fetches email from json file <a href="importcontacts.php">here</a> <br>
+    Note:  only Vcf and text file could be imported from the admin dashboard .
+        </div>
     
+    </div>
     <!-- Footer -->
     <div class="container-fluid text-white deep">
         <footer>
