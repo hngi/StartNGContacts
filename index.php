@@ -160,13 +160,15 @@
     </div>
 
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center mt-4">
             <div class="col-md-6">
-                <h4 class="mb-4 mt-3">Catch up on Startng Latest News</h4>
-                <p> Visit our <a href="" style="color: #44CF6C">Blog</a> for more update</p>
+                <h4 class="mb-4 mt-3">Add and Manage contacts and subscribers</h4>
+                <p>Have control over all your subscribers. <br>
+                 Send mails and import more contacts with ease.</p>
             </div>
             <div class="col-md-6 mb-3">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png" class="img-fluid">
+                <!-- <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png" class="img-fluid"> -->
+                <img src="https://res.cloudinary.com/salasi/image/upload/v1571951003/digi_jiyee2.png" class="img-fluid">
             </div>
         </div>
     </div>
@@ -189,7 +191,14 @@
             </div>
         </div>
     </div>
-
+        
+    <div class="container">
+        <div class="mb-4 mt-3">
+            Try out our Import emails functions that fetches email from json file <a href="importcontacts.php">here</a> <br>
+    Note:  only Vcf and text file could be imported from the admin dashboard .
+        </div>
+    
+    </div>
     <!-- Footer -->
     <div class="container-fluid text-white deep">
         <footer>
