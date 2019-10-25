@@ -158,7 +158,7 @@
     <div class="container">
         <div class="row align-items-center mt-4">
             <div class="col-md-6">
-                <h4 class="mb-4 mt-3">Add and Manage contacts and subscribers</h4>
+                <h2 class="mb-4 mt-3">Add and Manage contacts and subscribers</h2>
                 <p>Have control over all your subscribers. <br>
                  Disseminate information via mails and import more contacts with ease.</p>
             </div>
