@@ -23,7 +23,23 @@ $database_password = '';
 //# if your SMTP server is called "smtp.mydomain.com" you enter this below like this:
 //#
 //#     define("PHPMAILERHOST",'smtp.mydomain.com');
+// To use a SMTP server please give your server hostname here, leave it blank to use the standard
+// PHP mail() command.
 define('PHPMAILERHOST', '');
+//define('PHPMAILERHOST', 'email-smtp.us-west-2.amazonaws.com');
+
+
+// to use smtp authentication when sending the email uncomment the following
+// two lines and set the username and password to be the correct ones
+//$phpmailer_smtpuser = 'AKIA4F4TMVZJN6KNNP5X';
+//$phpmailer_smtppassword = 'BE4vIbepcgUvh0/qL12ULKUJuNMDOAoM8xg5Yblz1tje';
+
+//# you can set this to send out via a different SMTP port
+//define('PHPMAILERPORT',25);
+
+// to use SSL/TLS when sending set this value
+// it can either be "ssl" or "tls" or false to not use SSL/TLS at all
+//define("PHPMAILER_SECURE",'tls');
 // if TEST is set to 1 (not 0) it will not actually send ANY messages, but display what it would have sent
 // this is here, to make sure you edited the config file and mails are not sent "accidentally"
 // on unmanaged systems
