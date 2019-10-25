@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <title>Start NG</title>
-
     <style>
         body {
             font-family: Nunito;
@@ -129,7 +128,6 @@
         }
     </style>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
         <div class="container">
@@ -149,7 +147,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container-fluid body-banner pt-5 pb-5">
         <div class="col-md-6 offset-md-2">
             <h4 class="pt-5 mt-5 pb-4" style="color: #fff; font-style: normal; font-weight: 600; font-size: 35px; line-height: 27px;">Welcome to StartNG Contacts</h4>
@@ -158,32 +155,34 @@
             <a href="admin" class="btn btn-success pl-5 pr-5 mb-4">Admin Login</a>
         </div>
     </div>
-
     <div class="container">
         <div class="row align-items-center mt-4">
             <div class="col-md-6">
                 <h4 class="mb-4 mt-3">Add and Manage contacts and subscribers</h4>
                 <p>Have control over all your subscribers. <br>
-                 Send mails and import more contacts with ease.</p>
+                 Disseminate information via mails and import more contacts with ease.</p>
             </div>
+         
             <div class="col-md-6 mb-3">
                 <!-- <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png" class="img-fluid"> -->
                 <img src="https://res.cloudinary.com/salasi/image/upload/v1571951003/digi_jiyee2.png" class="img-fluid">
             </div>
         </div>
     </div>
-
     <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
         <div class="container pt-5 pb-5">
             <div class="row align-items-center">
                 <div class="col-md-8 pb-5">
-                    <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
-                    <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
+                    <h4 style="font-weight: bold; font-size: 40px;">Try out our New Import email function</h4>
+                    <p style="font-size: 20px;">Fetches emails from json file format
                     </p>
-                    <form class="form-inline">
-                        <input type="text" class="form-control col-md-8" id="email">
-                        <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
+                    <p style="font-size: 20px;">Note: Import Contact Function in dashboard, Only works with VCF and text file formats.
+                    </p>
+                    
+                       <form action="importcontacts.php">
+                        <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Proceed</button>
                     </form>
+                    
                 </div>
                 <div class="col-md-4">
                     <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
@@ -192,13 +191,7 @@
         </div>
     </div>
         
-    <div class="container">
-        <div class="mb-4 mt-3">
-            Try out our Import emails functions that fetches email from json file <a href="importcontacts.php">here</a> <br>
-    Note:  only Vcf and text file could be imported from the admin dashboard .
-        </div>
     
-    </div>
     <!-- Footer -->
     <div class="container-fluid text-white deep">
         <footer>
@@ -208,7 +201,6 @@
                         <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
                     </div>
                 </div>
-
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
@@ -223,7 +215,6 @@
                         <li><a href="curriculum.html">Curriculum</a></li>
                         <li><a href="blog2.html">Blog</a></li>
                         <li><a href="blog1.html">Student Stories</a></li>
-
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="search.html">Find a Course</a></li>
@@ -236,7 +227,6 @@
                         <li><a href="#">Privacy Policy</a></li>
                     </div>
                 </div>
-
             </div>
     </div>
     <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
@@ -251,12 +241,9 @@
         </div>
         </footer>
     </div>
-
     <!-- End of Footer -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-
 </html>
