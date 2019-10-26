@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <title>Start NG</title>
+
     <style>
         body {
             font-family: Nunito;
@@ -128,10 +129,11 @@
         }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom bg-custom deep">
         <div class="container">
-            <a href="/" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
+            <a href="/" class="navbar-brand"><img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" class="img-fluid" alt="logo" width="150px"></a>
             <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -140,58 +142,53 @@
                    
                     
                     <li class="nav-item mr-5">
-                        <a class="btn btn-success nav-link px-5" href="admin" style="color: #fff;">Admin
-                            Login</a>
+                        <!-- <a class="btn btn-success nav-link px-5" href="admin" style="color: #fff;">Admin
+                            Login</a> -->
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container-fluid body-banner pt-5 pb-5">
+
+    <!-- <div class="container-fluid body-banner pt-5 pb-5">
         <div class="col-md-6 offset-md-2">
             <h4 class="pt-5 mt-5 pb-4" style="color: #fff; font-style: normal; font-weight: 600; font-size: 35px; line-height: 27px;">Welcome to StartNG Contacts</h4>
             <p class="pb-3" style="color: #fff; font-style: normal; font-weight: 400; font-size: 16px; line-height: 27px;">
             </p>
             <a href="admin" class="btn btn-success pl-5 pr-5 mb-4">Admin Login</a>
         </div>
-    </div>
+    </div> -->
+
     <div class="container">
         <div class="row align-items-center mt-4">
-            <div class="col-md-6">
-                <h2 class="mb-4 mt-3">Add and Manage contacts and subscribers</h2>
-                <p>Have control over all your subscribers. <br>
-                 Disseminate information via mails and import more contacts with ease.</p>
-            </div>
-         
-            <div class="col-md-6 mb-3">
-                <!-- <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png" class="img-fluid"> -->
-                <img src="https://res.cloudinary.com/salasi/image/upload/v1571951003/digi_jiyee2.png" class="img-fluid">
+            <div class="col-md-6 mb-4">
+               
+                 <p>The file you upload will need to contain the emails you want to add to this list.<br><strong>Warning:</strong>the file needs to be plain text.Do not upload binary files like word document.</p>
+    <hr>
+    <p> file containing emails:</p>
+    <form action="">
+        <input type="file" name="" id="" style="background-color: #44CF6C; border-color: #44CF6C;">
+        <hr>
+        <p> if you check the test output, you will get the list of parsed emails on the screen, and the database will not be filled with the information.<br> this is useful to find out wether the format of your file is correct,it will only show forat 50 records</p>
+        <hr>
+        <input type="checkbox" name="Test" value="">Test Output<br>
+        <hr>
+
+        <input type="checkbox" name="omit" value="">Omit Invalid
+        <hr>
+        <input type="checkbox">:<strong>I prefer to emails in HTML format</strong>
+        <br>
+        <div class="mt-3 mb-3">
+
+            <button type="button" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">import</button>
+        </div>
+
+    </form>
             </div>
         </div>
     </div>
-    <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
-        <div class="container pt-5 pb-5">
-            <div class="row align-items-center">
-                <div class="col-md-8 pb-5">
-                    <h4 style="font-weight: bold; font-size: 40px;">Try out our New Import email function</h4>
-                    <p style="font-size: 20px;">Fetches emails from json file format
-                    </p>
-                    <p style="font-size: 20px;">Note: Import Contact Function in dashboard, Only works with VCF and text file formats.
-                    </p>
-                    
-                       <form action="importcontacts.php">
-                        <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Proceed</button>
-                    </form>
-                    
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
-                </div>
-            </div>
-        </div>
-    </div>
-        
-    
+
+
     <!-- Footer -->
     <div class="container-fluid text-white deep">
         <footer>
@@ -201,30 +198,35 @@
                         <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
                     </div>
                 </div>
+
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="https://startng.ml/signup" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="#" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="https://startng.ml/about">About Us</a></li>
-                        <li><a href="https://startng.ml/courses/index">Our Course</a></li>
-                        <li><a href="https://startng.ml/graduates">Hire a Grad</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Our Course</a></li>
+                        <li><a href="hireGrad.html">Hire a Grad</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="https://startng.ml/curriculum">Curriculum</a></li>
-                        <li><a href="https://startng.ml/blog">Blog</a></li>
+                        <li><a href="curriculum.html">Curriculum</a></li>
+                        <li><a href="blog2.html">Blog</a></li>
+                        <li><a href="blog1.html">Student Stories</a></li>
+
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="https://startng.ml/find-course">Find a Course</a></li>
-                        <li><a href="https://startng.ml/contact">Contact Us</a></li>
+                        <li><a href="search.html">Find a Course</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="https://startng.ml/faq">FAQ</a></li>
-                        <li><a href="https://startng.ml/terms">Terms of Service</a></li>
-                        <li><a href="https://startng.ml/privacy">Privacy Policy</a></li>
+                        <li><a href="help.html">FAQ</a></li>
+                        <li><a href="termsOfService.html">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </div>
                 </div>
+
             </div>
     </div>
     <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
@@ -239,9 +241,12 @@
         </div>
         </footer>
     </div>
+
     <!-- End of Footer -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
