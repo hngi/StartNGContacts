@@ -692,8 +692,8 @@ if (!isset($attachment_repository)) {
 }
 
 if (!isset($pageroot)) {
-    $pageroot = '/';
-    $GLOBALS['pageroot'] = '/';
+    $pageroot = '';
+    $GLOBALS['pageroot'] = '';
 }
 //# as the "admin" in adminpages is hardcoded, don't put it in the config file
 $adminpages = $GLOBALS['pageroot'].'/admin';
