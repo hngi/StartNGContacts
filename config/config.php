@@ -11,14 +11,15 @@
 *
 ==============================================================================================================
 */
+
 // what is your Mysql database server hostname
-$database_host = 'localhost';
+$database_host = '54.81.79.248';
 // what is the name of the database we are using
 $database_name = 'startngcontacts';
 // what user has access to this database
 $database_user = 'root';
 // and what is the password to login to control the database
-$database_password = '';
+$database_password = '6yt5^YT%';
 // if you have an SMTP server, set it here. Otherwise it will use the normal php mail() function
 //# if your SMTP server is called "smtp.mydomain.com" you enter this below like this:
 //#
