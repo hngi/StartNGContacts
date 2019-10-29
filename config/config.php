@@ -16,7 +16,7 @@ $pageroot = '';
 //
 
 // what is your Mysql database server hostname
-$database_host = '54.81.79.248';
+$database_host = 'localhost';
 // what is the name of the database we are using
 $database_name = 'startngcontacts';
 // what user has access to this database
