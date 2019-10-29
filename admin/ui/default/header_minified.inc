@@ -16,11 +16,11 @@
 <?php
   if (empty($_SESSION["adminloggedin"])) {
     print ('<a id="login" href="./?page=home">Login</a> ');
-     print ('<a id="" href="../index.php">Home</a> ');
+   
 
   } else {
     print ('<a id="logout" href="./?page=logout">Logout</a>');
-    print ('<a id="" href="../index.php">Home</a> ');
+  
   }
 ?>
 		</div>
