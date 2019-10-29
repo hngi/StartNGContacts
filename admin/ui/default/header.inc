@@ -7,14 +7,21 @@
 <div id="dialog"></div><div id="hiddendiv"></div>
 
 <div id="container" class="container_24 container">
-	<div id="header" class="grid_24 sixteen columns">
-		<div id="logo"><a href="https://www.phplist.com" target="_blank"><img src="ui/default/images/branding.png" alt="phpList, email newsletter manager, logo" title="phpList, the world's most popular Open Source newsletter manager" /></a></div>
-		<div id="logged">
+  <div id="header" class="grid_24 sixteen columns">
+    <div id="logo"><a href="../index.php" class="navbar-brand"><img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" class="img-fluid" alt="logo" width="150px"></a></div>
+
+    
+
+
+    <div id="logged">
 <?php
   if (empty($_SESSION["adminloggedin"])) {
     print ('<a id="login" href="./?page=home">Login</a> ');
+     print ('<a id="" href="../index.php">Home</a> ');
+
   } else {
     print ('<a id="logout" href="./?page=logout">Logout</a>');
+    print ('<a id="" href="../index.php">Home</a> ');
   }
 ?>
 		</div>
