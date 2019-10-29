@@ -12,6 +12,8 @@
 ==============================================================================================================
 */
 
+$pageroot = '';
+
 // what is your Mysql database server hostname
 $database_host = '54.81.79.248';
 // what is the name of the database we are using
