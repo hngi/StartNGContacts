@@ -163,20 +163,17 @@
         <div class="row align-items-center mt-4">
             <div class="col-md-6 mb-4">
                
-                 <p>The file you upload will need to contain the emails you want to add to this list.<br><strong>Warning:</strong>the file needs to be plain text.Do not upload binary files like word document.</p>
+                 <p>The function decodes your file and fetches email fields from them.<br><strong>Note:</strong>Its still in construction</p>
     <hr>
-    <p> file containing emails:</p>
+    <p> JSON FILE</p>
     <form action="">
         <input type="file" name="" id="" style="background-color: #44CF6C; border-color: #44CF6C;">
         <hr>
-        <p> if you check the test output, you will get the list of parsed emails on the screen, and the database will not be filled with the information.<br> this is useful to find out wether the format of your file is correct,it will only show forat 50 records</p>
+        
         <hr>
         <input type="checkbox" name="Test" value="">Test Output<br>
         <hr>
 
-        <input type="checkbox" name="omit" value="">Omit Invalid
-        <hr>
-        <input type="checkbox">:<strong>I prefer to emails in HTML format</strong>
         <br>
         <div class="mt-3 mb-3">
 
