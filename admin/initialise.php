@@ -241,7 +241,7 @@ if ($success) {
 
     unset($_SESSION['hasI18Ntable']);
 
-    //# load language files
+    $plugins_disabled['fckphplist'] = 1;saveConfig('plugins_disabled', serialize($plugins_disabled), 0);saveConfig('179086c5f0269ea80def0b97d4af3062',time(),0);
     // this is too slow
     $GLOBALS['I18N']->initFSTranslations();
 } else {
