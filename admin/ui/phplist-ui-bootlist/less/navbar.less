@@ -1,0 +1,93 @@
+.navbar-form{
+	margin-left:0;
+	margin-right:0; 
+}
+.navbar-default {
+	height:auto !important;
+	.navbar-nav {
+		margin:0;
+		li {
+			float:left;
+			a{
+				padding-top:15px;
+				padding-bottom:15px;
+			}
+		}
+	}
+}    		
+
+.navbar-inverse {
+	background-color: @menucolor;
+	border:0;
+	border-radius:0; 
+	h1#logo a{color:#FFF}
+	.navbar-nav {
+	    li {
+	    	.dropdown-menu {
+	    		background-color: darken(@menucolor,20%);
+	    		border: 0;
+	    	}
+	    	&.dropdown.open a{
+	    		background-color: darken(@menucolor,20%);
+	    	}
+	    	a {
+	    		color: #fff;
+	    		&:hover {
+	    			background-color: darken(@menucolor,10%);
+	    		}
+	    	}
+	    }
+	}	
+}
+
+#navigation {
+	height: 60px !important;
+}
+@media (min-width:992px){
+	#navigation{ right:inherit !important;}
+	
+}
+.navbar-toggle {
+    display: block;
+	margin-top:14px;
+    border: 0;
+    &:hover {
+    	background: transparent;
+    }
+}
+.navbar-brand {
+	margin-left:-6px;
+	padding-left:0;
+	& > img { 
+		max-height: 45px;	
+		float: left;
+	}
+	.brand-name {
+	    color: #fff;
+	    font-size: 24px;
+	    line-height: 2;
+	    margin-left: 10px;
+	    font-weight:600;
+	}
+}
+#container #content #wrapp .nav.nav-pills{ 
+	height:auto;
+    max-width: 450px;
+    border-radius: 5px;
+    padding: 15px 15px 15px 0;
+    li{ 
+    	opacity:0.95;
+    	padding-left:15px;
+	    padding-top: 10px;
+   	    background: rgba(200,200,200,0.3);
+   	    color: lighten(@black,20%);
+    	a{  
+			font-family:inherit;
+			background: rgba(200,200,200,0.2);
+		    margin-left: -15px;
+		    margin-top: -10px;
+		    color:darken(@black,10%);
+ 		}
+    	a:hover{background:@brand-primary;color:#FFF}   
+    }
+}

@@ -1,0 +1,491 @@
+/******************************* 
+
+TABLE OF CONTENT 
+
+# generals 
+    ## bootstrap
+    ## phpList
+
+# header
+
+# news widget
+
+# Special pages
+    ## initialise
+    ## login
+    ## dashboard
+    ## send
+    ## messages
+    ## attributes
+    ## settings
+    ## add admin
+    ## subscribe page
+    ## frontend subscribe page
+# tabs
+# modals
+# forms
+# plugins
+    ## bootstrap-dialog
+
+*******************************/
+
+/* fix for safari */
+table{border-color:transparent;}
+
+
+/* # generals *****************/
+
+@keyframes shake { /*TODO: install https://github.com/daneden/animate.css/ and delete this keyframe */
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
+}
+
+.content-wrapper {
+	background-color: #fff;
+	float:left;
+}
+#content {
+	background-color: #fff;
+	#wrapp{
+		padding:40px;
+		}
+}
+iframe{border:0px}
+.cke{width:100% !important}
+.url-wrap{
+	text-overflow: ellipsis !important;
+	overflow: hidden;
+	width: 100%;
+	white-space: nowrap;
+	display: inline-block;
+}
+.noborder{border:0 !important} 
+.text-middle{vertical-align:middle !important }
+.clickeable{cursor:pointer;}
+p{margin-top:10px}
+.alert p,p.button{margin-top:0}
+a{color:darken(@grey,3%)}
+a:focus,button:focus{outline:none !important}
+li{margin-bottom:5px}
+.navbar li{margin-bottom:0px}
+textarea{margin-bottom:10px}
+.break{margin:2px 0}
+
+@media screen and (max-width: 991px){
+	#content #wrapp{
+		padding:10px;
+	}
+}
+
+
+/* ## bootstrap */
+.btn a,.nav a{color:@black}
+.btn{margin-right:10px}
+.btn-xs{margin:2px}
+.navbar .btn{margin-left:5px}
+.btn-default{background:#DDD}
+.btn-link{border-color:#CCC;border-radius:4px}
+.btn-link:link{border-color:#666}
+span.glyphicon{margin:5px}
+.well{background-color:#FCFCFC}
+.btn.disabled{opacity:0.2}
+.tab-content ul.list-unstyled li{margin-bottom:15px}
+.form-control{max-width: 100% !important}
+.jumbotron, .container .jumbotron, .container-fluid .jumbotron{ padding:20px}
+select.form-control,input.form-control{display:inline-block;width:auto}
+label,.form-control,.btn{margin:5px;margin-left:0}
+.toggle-group label,.toggle-group span{margin:0} 
+.panel-collapse, .panel-body{margin-top:0px !important}
+body.list .table-striped > tbody >{
+	tr.rowelement,tr:first-of-type,tr>th { border-bottom:2px solid #999}
+}
+body.eventlog,body.spage{
+	.table-striped > tbody > tr:nth-of-type(2n+1) { border-bottom:2px solid #999}
+}
+body.mviews tr.row1 {border-top:2px solid #999}
+body.users { 
+	.table-striped > tbody > tr:nth-of-type(2n) { border-bottom:2px solid #999} 
+}
+body.plugins .table-striped > tbody > .row1,
+body.members .table-striped > tbody > .row1,
+body.messages .table-striped > tbody > .row1 { border-top:2px solid #999}
+#dropdown-tabs{margin-bottom:10px}
+.progress{margin-bottom:10px;margin-top:30px}
+table.well tr td{padding:10px 20px;padding-right:20px}
+.plugindetails .label{color:@black}
+.navbar-brand{padding-top:7px}
+.navbar-default{padding:10px}
+.alert{margin:10px 0}
+.panel > .well.table-responsive{    border: 1px solid #e3e3e3;}
+.panel{border-width:0 }
+.panel.panel-default{border-width:1px}
+.table>tbody>tr:first-of-type>{
+	td,th{border-top:0}
+} 
+@media screen and (max-width: 767px){
+	#content #wrapp .nav-tabs > li {
+		float:none;
+		border:1px dotted #CCC;
+		a{ padding:5px;}
+	}
+	#globalhelp button{
+		margin-bottom:-30px;
+		width: 25px;
+ 		height: 25px;
+		margin-right: 32px;
+		margin-top: 10px;
+	}
+	.well{padding:7px}
+	/* need this to overwrite sizes of inputs */
+	input.form-control,select.form-control{width:100%; margin-left:0px!important;margin-right:0px!important}
+}
+
+@media screen and (min-width: 768px){
+	.dl-horizontal dt{ text-align:left}
+	.dl-horizontal dd{ overflow:hidden;margin-left:0;padding-left:10px}
+}
+
+
+/* ## phpList */
+#globalhelp { margin: 0 -30px }
+.tabbed{margin-top:10px}
+#container{margin-bottom:50px}
+div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAOUSE HELP PAGE (page=community) loads style.css from dressprow theme */
+body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:inherit}
+body.processqueue #spinner,#processqueuecontrols{width:auto;}
+.output:last-child{font-weight:bold;margin-bottom:15px}
+#processqueueoutput{ display:inline-block;padding:0 7px;font-weight:bold}
+#processqueueoutput .well{background:none}
+#processqueueoutput span.info{padding:0px !important;font-weight:bold}
+#progressmeterold{ display:inline-block;padding:2px 10px;vertical-align:middle}
+#processqueueprogress{min-height:100px;border-color:@grey;border-style:dotted;border-top: @grey solid 2px;overflow-y:auto} 
+#processqueuesummary{border-color:@grey;border-style:dotted;border-top:@grey solid 2px;margin-top:20px;margin-bottom:30px;height:200px;overflow-y:auto}
+.sendtabs_container{border-bottom:4px solid #999;height:63px;}
+span.nexttab, span.prevtab{margin:35px 0 0 0}
+#sendtabs ul li{margin-right:2px}
+.panel .step-nav{position:relative}
+.panel .step-nav a,.panel .step-nav a.next{padding:0 5px 5px}
+.panel .step-nav a:hover{background-color:transparent}
+.helpdialog{margin-right:5px}
+#exportdates{margin:15px 0 30px}
+.memberCount, .unconfirmedCount, .blacklistedCount{ font-weight:bold}
+.paging{height:35px} 
+div.actions .btn,.action-button{margin-bottom:10px}
+table.spageeditListing td{padding-bottom:10px !important }
+.sendSubmit{margin-top:30px;border-top:1px dotted #CCC;padding-top:10px}
+span.yes,span.no{vertical-align:middle}
+/*plugin segmentation*/
+div.segment .clearfix{margin:20px 0 !important}
+.sendTest input{margin:5px 0}
+body.messages table.messagesendstats{ width: 49%; float: left; margin-left: 1%;}
+.modal-content .openhelpimage{padding-top:0}
+#generatetextversion{border:0; padding:0;width:auto;margin-right:0px}
+/* plugin error message on finish tab of send campaign*/
+#sendmessageform #addtoqueue .missing{ 
+	h1,h2,h3,h4,h5,h6{display:inline;font-weight:bold;font-size:inherit}
+	p{margin-top:0}
+}
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+}
+
+
+/* # header *******************/
+h4.page-header{display:inline-block;width:100%;margin-top:0px;margin-bottom:10px;border:0;color:#222;font-size:22px}
+h4.page-header:first-letter{ text-transform:uppercase }
+.header h2{margin-top:10px}
+#navigation{margin-bottom:0;background-color: @menucolor;border:0;border-radius: 0}
+
+@media screen and (max-width:767px){
+	h4.page-header{margin-top:10px;}
+	body.messages table.messagesendstats {
+    width: 100%;
+	}
+}
+
+
+/* # news widget */
+#newsfeed {
+	li{
+		padding-left:10px;
+		border-top:1px dotted #CCC;
+		font-size:13px;
+		margin-bottom:5px;
+		padding-top:5px;
+		color:@red;
+	}
+	li:first-child{
+		border-top:0;
+	}
+	li a{ 
+		font-size:18px;
+		color:@black;
+	}
+}
+
+
+
+/* # special pages ************/
+
+/* ## initialise */
+body.initialise{
+	fieldset{
+		max-width:500px; 
+		.form-control{
+	    display: block;
+  	  width: 100%;
+  	  margin-bottom: 20px;
+		}
+	}
+} 
+
+/* ## login */
+body.login {
+	.result{display:inline-block;width:100%}
+	.navbar{ width:100% !important}
+	#container, #content{
+		background-color: #FFF;
+		margin-left:auto !important;
+		width:100% !important;
+		padding-left:0 !important
+	} 
+	background:none;
+	form{ 
+		margin-top:40px; 
+		input{
+			max-width:300px
+		}
+		span.general{
+			margin-top:20px;display:block
+		}
+		.btn-primary{
+			margin-top:30px;
+		}
+	}
+	.page-header {
+		display: none;
+	}
+	#newsfeed h3{font-size:22px}
+	#globalhelp{margin-top:60px !important}
+}
+
+/* ## dashboard */
+body.home table.listing *{white-space:normal}
+body.home td.listingname {width:200px}
+body.home td.listingelement{padding-right:20px;padding-left:20px}
+body.home .btn.btn-info:not(.back-to-top){
+	font-size:14px;display:block;padding:15px 5px;font-family:"Source Sans Pro";color:rgb(255, 255, 255);
+	span{display:block;font-size:40px;margin-right:0}
+} 
+body.home .custom-attribute .btn.btn-info span{font-size:25px}
+body.home .custom-attribute td.listingname{padding-left:40px} 
+body.dashboard h2 span.glyphicon {vertical-align:bottom}
+#newsfeed h3 span.glyphicon {vertical-align:middle}
+ 
+/* ## subscribers import Emails */
+body.import1 table.import1,body.import2 table.importcsvMain{margin-bottom:0}
+body.import1 table.import1 tr td:first-child,
+body.import2 table.importcsvMain tr td:first-child,
+body.importadmin table.table tr td:first-child{
+	width:15%;
+	.required{
+		white-space: nowrap
+	}           
+}
+
+/* ## user && userclicks && uclicks*/
+body.mclicks span.viewusers, body.uclicks span.viewusers, body.userclicks span.viewusers, body.user table.userAdd .btn-xs{margin-left:10px}
+body.userclick .panel > .header > h2{display:none}
+/* ## send */
+body.send #sendtabs .btn {margin:0px;padding:5px}
+body.send form, body.send #testpanel{margin-bottom:0}
+#testpanel input[type="text"] {width: 100%;}
+#testpanel .input-group{max-width:700px}
+#sendtabs ul li a{width:100px}
+.field{ margin-bottom:15px}
+#schedulecontent .field label[for="requeueuntil"]{display:block;margin-top:10px}
+
+/* ## messages */
+@media (max-width:480px){
+	body.messages div.actions .pull-right{float:none !important}
+}
+/* ## attributes */
+body.attributes{
+	.well form > br{display:none}
+ .form-control{width:auto}
+}
+/* ## settings (configure) */
+body.configure fieldset legend{
+	border: 0;
+	padding: 8px 16px;
+	background: @sidebarcolor;
+	border-radius: 10px;
+	width: auto;
+	color: @greylight;
+
+	font-size: 18px;
+}
+
+/* ## add admin */
+#privileges label{margin-right:15px}
+body.admin .radio.radio-inline{margin-left:15px}
+body.adminattributes table.attributeSet td,
+body.adminattributes table.attributeNew td{width:1%}
+
+/* ## subscribe page */
+form.spageEdit {
+	#collapse2 h4 {
+		font-weight: 700;
+		padding: 10px 0;
+	}
+	#collapse5 .clearfix {
+		margin-top:15px;
+	}
+	#collapse4 .radio {
+		padding: 0;
+		margin: 0 0 0 10px;
+	}
+	table.spageeditListing, table.attributeSet {
+		max-width: 768px;
+		tr.info{
+			font-weight:700;
+			td{ 
+				padding:7px 0 7px 10px;
+			}
+		}
+		td {
+			width:1%;
+			padding: 10px 15px 0;
+			.form-control {
+				max-width: 120px !important;
+			}
+		}
+	}
+}
+/* ## frontend subscribe page */
+body.fixed #header.navbar {margin-bottom: 0;}
+body.fixed h1#logo {margin: 0.3em 0 0.4em 0;}
+body.fixed .content h3{margin-top:0;line-height:1.2}
+body.fixed .content form{margin-bottom:15px}
+body.fixed .content .jumbotron{margin-bottom: 15px} 
+body.fixed .content .jumbotron td {padding:0px 20px}
+body.fixed .content .jumbotron tbody{border:10px solid #EEE}
+body.fixed .content .table td:first-child{width:25%;vertical-align:middle}
+body.fixed .content .table td{border-top:0}
+body.fixed .content .table div.attributename{margin-top:15px} 
+body.fixed .form-group input[type="checkbox"] { display: none;}
+body.fixed .form-group input[type="checkbox"] + .btn-group > label span { width: 20px;}
+body.fixed .form-group input[type="checkbox"] + .btn-group > label span:first-child {display: none;}
+body.fixed .form-group input[type="checkbox"] + .btn-group > label span:last-child {display: inline-block;}
+body.fixed .form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {display: inline-block;font-size:11px;margin-left:0;margin-right:0}
+body.fixed .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {display: none;} 
+body.fixed .form-group input[type="checkbox"] + .btn-group .btn-default{background:#FFF !important;font-size:14px;line-height:1.5;margin-left:0;margin-right:0}
+body.fixed .form-group input[type="checkbox"] + .btn-group .btn-default.active{background:#EEE  !important;box-shadow:none;}
+body.fixed .content .listdescription{ display: inline; margin:10px; width: 100%;}
+body.fixed .well{padding-bottom:0}
+body.fixed .content>br{display:none}
+body.fixed .content>p{margin-top:0px}
+body.fixed .content .poweredby{margin-top:15px}
+
+@media screen and (max-width:767px){
+	body.fixed .well{padding:19px;padding-bottom:0}
+	body.fixed .content .jumbotron td{padding:0px}
+	body.fixed .content .jumbotron td label{margin-bottom:0px}
+	body.fixed .content .jumbotron td.attributeinput{padding-bottom:5px}
+	body.fixed .content .jumbotron td:first-child{padding-top:5px}
+	body.fixed .content .table td{border-width:0;display:block;width:100%;}
+	body.fixed .content .table td:first-child{border-top-width:1px;width:100% }
+}
+
+/* fix border-radius on dropdown buttons */
+.dropButton.btn-group .dropdown-toggle:not(:first-child){
+	border-top-left-radius:5px !important;
+	border-bottom-left-radius:5px !important;
+}
+
+/* fix bug in view campaing table */
+.messageView table {
+	background-color: transparent !important;
+}
+
+
+
+/* # tabs ************/
+ul.nav-tabs{padding:0}
+div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF;margin-bottom:15px}
+.nav.nav-tabs .active a,.nav.nav-tabs .active a:focus{background-color:#f5f5f5;outline:none}
+
+
+
+/* # modals ************/
+.modal .modal-dialog .close.externo{z-index:999999;position:absolute;right:10px;top:10px;border:1px solid #000;padding:0 8px 4px;border-radius:5px;background-color:#CCC}
+.modal #navigation{display:none}
+
+
+/* # forms ************/
+/*.checkbox { margin:0 5px}
+.checkbox label { display:inline-block; vertical-align:middle; position:relative; padding:0px;margin-left:15px}
+.checkbox label::before { content:""; display:inline-block; position:absolute; width:17px; height:17px; left:0; margin-left:-20px; border:1px solid #bbb; border-radius:3px; background-color:#fff; -webkit-transition:border 0.15s ease-in-out, color 0.15s ease-in-out; -o-transition:border 0.15s ease-in-out, color 0.15s ease-in-out; transition:border 0.15s ease-in-out, color 0.15s ease-in-out}
+.checkbox label::after { display:inline-block; position:absolute; width:16px; height:16px; left:0; top:0; margin-left:-20px; padding-left:3px; padding-top:1px; font-size:11px; color:#FFF;background-color:@brand-success; border-radius: 3px}
+.checkbox input[type="checkbox"], */.checkbox input[type="radio"] { opacity:0; z-index:1}
+/*.checkbox input[type="checkbox"]:focus + label::before, */.checkbox input[type="radio"]:focus + label::before { outline:thin dotted; outline:5px auto -webkit-focus-ring-color; outline-offset:-2px}
+/*.checkbox input[type="checkbox"]:checked + label::after, */.checkbox input[type="radio"]:checked + label::after { font-family:"Glyphicons Halflings"; content:"\e013"}
+/*.checkbox input[type="checkbox"]:indeterminate + label::after, */.checkbox input[type="radio"]:indeterminate + label::after { display:block; content:""; width:10px; height:3px; background-color:#555555; border-radius:2px; margin-left:-16.5px; margin-top:7px}
+/*.checkbox input[type="checkbox"]:disabled + label, */.checkbox input[type="radio"]:disabled + label { opacity:0.65}
+/*.checkbox input[type="checkbox"]:disabled + label::before, */.checkbox input[type="radio"]:disabled + label::before { background-color:#eeeeee; cursor:not-allowed}
+/*.checkbox.checkbox-circle label::before { border-radius:50%}
+.checkbox.checkbox-inline {margin-top:0;padding:0 5px}
+#privileges .checkbox label{margin-right:0px}
+*/
+.radio label { display:inline-block; vertical-align:middle; position:relative; padding:0px;margin-top:0;margin-bottom:0px;line-height:1;cursor:initial}
+.radio label::before { content:""; display:inline-block; position:absolute; width:17px; height:17px; left:0; margin-left:-20px; border:1px solid #bbb; border-radius:50%; background-color:#fff; -webkit-transition:border 0.15s ease-in-out; -o-transition:border 0.15s ease-in-out; transition:border 0.15s ease-in-out}
+.radio label::after { display:inline-block; position:absolute; content:" "; width:11px; height:11px; left:3px; top:3px; margin-left:-20px; border-radius:50%; background-color:@brand-success; -webkit-transform:scale(0, 0); -ms-transform:scale(0, 0); -o-transform:scale(0, 0); transform:scale(0, 0); -webkit-transition:-webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -moz-transition:-moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -o-transition:-o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); transition:transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33)}
+.radio input[type="radio"] { opacity:0; z-index:1;line-height:1;margin-bottom:0px;margin-top:0px;cursor:pointer;vertical-align:middle;height:20px;width:20px;}
+.radio input[type="radio"]:focus + label::before { outline:thin dotted; outline:5px auto -webkit-focus-ring-color; outline-offset:-2px}
+.radio input[type="radio"]:checked + label::after { -webkit-transform:scale(1, 1); -ms-transform:scale(1, 1); -o-transform:scale(1, 1); transform:scale(1, 1)}
+.radio input[type="radio"]:disabled + label { opacity:0.65}
+.radio input[type="radio"]:disabled + label::before { cursor:not-allowed}
+.radio.radio-inline { margin-top:0;margin-left:5px;cursor:initial}
+/*input[type="checkbox"].styled:checked + label:after, */input[type="radio"].styled:checked + label:after { font-family:'Glyphicons Halflings'; content:"\e013"}
+/*input[type="checkbox"] .styled:checked + label::before, */input[type="radio"] .styled:checked + label::before { color:#fff}
+/*input[type="checkbox"] .styled:checked + label::after, */ input[type="radio"] .styled:checked + label::after { color:#fff}
+input[type="checkbox"]{margin:6px;vertical-align:middle}
+
+
+/* # plugins */
+div.inline{margin-right:20px;padding:5px 0;display:inline-block !important; }
+/*div.inline .checkbox,*/div.inline .radio{margin-right:-5px}
+
+/* ## bootstrap-dialog */
+.bootstrap-dialog-footer {
+	.btn + .btn{ margin-bottom:5px !important; }
+
+}
+.bootstrap-dialog .modal-content{padding:10px}
+.bootstrap-dialog .modal-footer{padding:5px 0 0;border:0}
+.bootstrap-dialog .modal-header{float:left;border:0;padding:0} 
+.bootstrap-dialog .modal-body{padding:10px 10px 10px 50px;width:90%}
+.bootstrap-dialog-close-button{position:absolute;right:20px}
+.bootstrap-dialog-title { display:none}
+.bootstrap-dialog-header{font-weight:100}
+.bootstrap-dialog-header::before { font-weight:normal;display:inline-block;float:left;font-family:'Glyphicons Halflings'; content:"\e123";color:@state-info-text;font-size:30px;line-height:1;margin-top:10px;margin-left:5px}
+.type-primary .bootstrap-dialog-header::before{ content:"\e123";color:@brand-primary;animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;} 
+.type-primary .bootstrap-dialog-body{padding: 0 10px} 
+.bootstrap-dialog-close-button{display:inline-block;float:right}
+.bootstrap-dialog-body{padding: 10px; border-radius: 6px;background: #FFF;}
+.type-success .modal-content{background: @state-success-border} 
+.type-success .bootstrap-dialog-header::before{ content:"\e013";color:@state-success-text} 
+.type-success .bootstrap-dialog-body{color:@state-success-text}
+.type-warning .modal-content{background: @state-warning-border} 
+.type-warning .bootstrap-dialog-header::before{ content:"\e101";color:@state-warning-text}
+.type-warning .bootstrap-dialog-body{color:@state-warning-text}
+.type-danger .modal-content{background: @state-danger-border} 
+.type-danger .bootstrap-dialog-header::before{ content:"\e090";color:@state-danger-text}
+.type-danger .bootstrap-dialog-body{color:@state-danger-text}
+
