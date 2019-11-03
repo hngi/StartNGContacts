@@ -124,21 +124,7 @@
 
 
 <div class="container-fluid text-white deep">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 mt-3 mb-4">
-                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
-                    </div>
-                </div>
-                <div class="row pb-4">
-                    <div class="col-lg-4 col-md-12 mb-3">
-                        <h4 class='mb-4'>Ready to take the Leap?</h4>
-                       
-                    </div>
-                  
-   
-               </footer>
+        
     
     <!-- End of Footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
