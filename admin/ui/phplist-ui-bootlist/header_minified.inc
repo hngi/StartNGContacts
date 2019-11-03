@@ -34,11 +34,11 @@
     		          if (empty($_SESSION["adminloggedin"])) {
 						  if (empty($_SESSION['firstinstall']) && empty($_GET['firstinstall'])) {
 							  print ('<a id="login" class="navbar-btn btn-primary btn-sm" href="./?page=home">' . s('Login') . '</a> ');
-							   print ('<a id="" href="../index.php">Home</a> ');
+							  
 						  }
     		          } else {
     		            print ('<a id="logout" class="navbar-btn btn-primary btn-sm" href="./?page=logout">'.s('Logout').'</a>');
-    		                print ('<a id="" href="../index.php">Home</a> ');
+    		               
     		          }
     		        ?>
     			    </div>
