@@ -1,0 +1,179 @@
+/* Common componants style */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+       url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('../fonts/glyphicons-halflings-regular.svg#@glyphicons') format('svg');
+}
+
+body {
+	font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 15px;
+	overflow-x:hidden;
+}
+
+#container {
+	margin-bottom:0;
+	.accordion{
+	 	.panel-body {
+			height: auto;
+		}
+	}
+}
+#footer {
+	display: inline-block;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+	margin-top:20px;
+}
+@media (max-width:480px){
+	#footer .pull-right,#footer .pull-left{
+		float:none !important;
+		text-align:center;
+		margin-bottom:10px
+	}
+}
+
+#globalhelp {
+	.alert {
+		margin: 0;
+		padding-left:30px;
+	}
+	button {
+		margin-bottom: -20px;
+		z-index: 10;
+	}
+
+}
+.btn-primary {
+	background-color: @grey;
+	border-color: @grey;
+	color:#FFF !important;
+}
+
+
+/* FIXES */
+.collapse.in {
+	display: inline-block;
+	width: 100%;
+}
+
+#content {
+	min-height:auto !important;
+	background:none; 
+}
+div.panel {
+    clear: both;
+}
+.nav-tabs {
+	display:inline;
+}
+
+.filterdiv {
+	width: 100%;
+	display: inline-block;
+	height: auto!important;
+	border: 1px solid #e7e7e7;
+	background-color: #f8f8f8;
+	form {
+		input, select, button {
+			margin: 4px;
+		}
+	}
+}
+.minitabs {
+	display:inline-block;
+	.navbar {
+		height: auto!important;
+		margin: 0;
+		padding:0;
+		.nav.navbar-nav {
+			height: auto!important;
+			margin:0 !important
+		} 
+	}
+}
+#newsfeed {
+	display: inline-block;
+	width: 100%;
+}
+/* Fix import page menu */
+.import {
+	.nav {
+		height: auto !important;
+		margin-bottom: 20px;
+		a {
+			font-family: inherit;
+			&:before {
+				font-family: 'Glyphicons Halflings';
+				margin-right: 5px;
+			}
+		}
+	}
+}
+/* Fix submenu active link */
+.sidebar .menu #menuTop>ul li.open ul li.active a:before {
+	content: "\e258";
+	font-family: 'Glyphicons Halflings';
+	font-size: 13px;
+    margin-right: 5px;
+}
+
+a#logout,a#login {
+	&:before {
+		content: "\e017";
+		font-family: 'Glyphicons Halflings';
+		margin-right: 7px;
+		vertical-align:middle;
+		padding-bottom:2px;		
+	}
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+code { 
+	font-size:14px;
+}
+input[type="file"]{
+	padding:0;
+}
+
+ul#listcategory {
+  columns: 1;
+  -webkit-columns: 1;
+  -moz-columns: 1;
+  margin-bottom: 0;
+
+
+}
+@media only screen and (min-width: 768px) {
+  ul#listcategory {
+    columns:2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    margin-bottom: 0;
+
+  }
+}
+/* Fix for template button page */
+
+span.delete.alignButtons {
+	margin-left:-3px;
+}
+span.glyphicon{
+	margin-top: 6px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+span.glyphicon.glyphicon-eye-open,
+span.glyphicon.glyphicon-edit,
+span.glyphicon.glyphicon-trash {
+	top:0px;
+}
